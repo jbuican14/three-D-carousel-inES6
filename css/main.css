@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    padding:0;
+    margin:0;
+    font-family: 'Nunito', sans-serif;
+}
+header, #main, #footer {
+    padding: 20px;
+    border: 2px solid #555555;
+    margin: 10px 20px;
+}
+
+#footer img{
+    border-radius: 50%;
+    width:80px;
+    height:80px;
+    display:inherit;
+}
+
+.carousel-controller {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555555;
+}
+
+/* form */
+label{
+    width: 30%;
+    margin-top: 1rem;
+    padding: 0.4rem;
+}
+select {
+    margin-right: 1.3rem;
+    font:inherit;
+}
+
+select:focus {
+    outline: none;
+    background: #e9e3e3;
+    border-color: #ceafaf;
+}
+
+/* 3D carousel */
+.carousel_display {
+    width: 320px;
+    height: 240px;
+    position: relative;
+    perspective: 1000px;
+    margin: 20px auto; 
+}
+
+.threeD_carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;  
+    transform: translateZ(-507px); 
+    transition: transform 1.5s;
+}
+
+.carousel{
+    position: absolute;
+    width: 300px;
+    height: 220px;
+    top: 10px;
+    left:10px;  
+    background: url('../assets/museumNews1.png') no-repeat;
+    background-size: contain;
+    transition: all 1s; 
+    cursor: pointer;
+    
+}
+
+#next, #prev {
+    width: 3.5rem;
+    height: 2rem;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ceafaf;
+    padding: 5px;
+    text-align: center;
+}
+
+.carousel:nth-child(1) { transform: rotateY(0deg) translateZ(362px); border:1px solid grey;}
+.carousel:nth-child(2) { transform: rotateY(45deg) translateZ(362px); border:1px solid grey; }
+.carousel:nth-child(3) { transform: rotateY(90deg) translateZ(362px); border:1px solid grey;}
+.carousel:nth-child(4) { transform: rotateY(135deg) translateZ(362px); border:1px solid grey;}
+.carousel:nth-child(5) { transform: rotateY(180deg) translateZ(362px); border:1px solid grey;}
+.carousel:nth-child(6) { transform: rotateY(225deg) translateZ(362px); border:1px solid grey;}
+.carousel:nth-child(7) { transform: rotateY(270deg) translateZ(362px); border:1px solid grey;}
+.carousel:nth-child(8) { transform: rotateY(315deg) translateZ(362px); border:1px solid grey;}
